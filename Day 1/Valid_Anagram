@@ -1,0 +1,6 @@
+Sol 1: Sorting: 
+            Time Complexity O(n logn)
+            Space Complexity O(1)
+
+Sol 2: Hashmap: Time Complexity O(n)
+                Space Complexity O(n)

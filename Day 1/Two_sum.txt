@@ -1,0 +1,11 @@
+Sol 2: Hashmap: Time is O(n)
+                Space is O(n)
+
+Sol 1: Sort(cannot give me the index of the array elements that make up the sum  though so wrong, only can return me the elements that make up the sum):     Time is O(nlogn)
+                Space is O(1)
+
+Sol 3 : brute Force 
+                Time is O(n^2)
+                Space is O(1)
+
+

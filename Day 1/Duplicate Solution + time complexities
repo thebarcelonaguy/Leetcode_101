@@ -1,0 +1,6 @@
+Sol 1: Hashmap: Time is O(n)
+                Space is O(n)
+
+Sol 2: Set:     Time is O(n)
+                Space is O(n)
+
