@@ -1,0 +1,41 @@
+Sol1: Using unicode: Time complexity: O(26*m*n) where n is the avg length of string and m is number of strings
+Space complexity: O(n)
+
+
+
+Both solutions approach the problem of grouping anagrams differently, and their efficiencies depend on the specific context of the problem. Let's compare the two:
+
+### 1. Sorting-based Approach:
+
+The first solution sorts each word in the `strs` list. 
+Time Complexity: \( O(n*k*log k) \)
+Where:
+- \( n ) is the number of words in the `strs` list.
+- \( k ) is the maximum length of a word in the `strs` list.
+
+### 2. Counting-based Approach:
+
+The second solution creates a frequency count of the characters for each word.
+Time Complexity: \( O(n * k) \)
+Where:
+- \( n \) is the number of words in the `strs` list.
+- \( k \) is the maximum length of a word in the `strs` list.
+
+### Comparison:
+
+1. **Time Complexity**:
+   - The counting-based approach generally has a better time complexity, especially if \( k \) (the maximum length of words) is large. While both complexities are linear with respect to \( n \), the \( k \log k \) term for the sorting-based approach can be significant if \( k \) is large.
+   - The counting-based approach has a consistent \( O(n * k) \) because it always processes all letters of all words, regardless of the word's actual content.
+
+2. **Space Complexity**:
+   - Both approaches have a space complexity of \( O(n * k) \) because of the data structures they use (dictionaries with lists). However, the counting-based approach will consistently use a list of size 26 for the counts, while the sorting-based approach will use strings of variable sizes depending on the actual words. This means the actual space used could be more for the sorting-based approach, especially for long words.
+
+3. **Assumptions and Limitations**:
+   - The counting-based approach assumes that the input consists of lowercase English letters only. If the problem space were to expand to include uppercase letters, special characters, or other alphabets, the counting-based solution would need modifications, whereas the sorting-based solution would remain more versatile.
+  
+4. **Practical Run-time**:
+   - Despite the time complexity analysis, practical run-time can vary. The sorting-based approach could be faster for small \( k \) due to inherent efficiencies in sorting algorithms and Python's internal optimizations. Benchmarking the two solutions with real-world datasets is the best way to ascertain practical differences.
+
+### Conclusion:
+
+While the counting-based approach generally has better theoretical time efficiency, the best approach may vary depending on specific constraints and needs. For the standard problem of grouping anagrams from lowercase English words, the counting-based solution is more time-efficient. However, if versatility and adaptability to a wider range of inputs are needed, the sorting-based approach might be preferred.
